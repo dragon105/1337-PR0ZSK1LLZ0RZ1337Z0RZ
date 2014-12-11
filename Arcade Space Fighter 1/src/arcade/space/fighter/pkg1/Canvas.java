@@ -7,8 +7,8 @@ package arcade.space.fighter.pkg1;
 
 /**
  *
- * @author Cicada
+ * @author Katydid
  */
-public class Canvas extends ArcadeSpaceFighter1{
-    
+public class Canvas extends ArcadeSpaceFighter1 {
+    canvas0 = new java.awt.Canvas
 }

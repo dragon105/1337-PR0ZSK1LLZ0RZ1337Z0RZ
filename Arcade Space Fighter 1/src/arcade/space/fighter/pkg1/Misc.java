@@ -7,7 +7,7 @@ package arcade.space.fighter.pkg1;
 
 /**
  *
- * @author Cicada
+ * @author Katydid
  */
 public class Misc {
     float xPos; // position on x axis
