@@ -7,7 +7,7 @@ package arcade.space.fighter.pkg1;
 
 /**
  *
- * @author Cicada
+ * @author Katydid
  */
 public class Enemies {
     int HP; // health

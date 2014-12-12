@@ -9,8 +9,10 @@ package arcade.space.fighter.pkg1;
  *
  * @author Katydid
  */
-public class ArcadeSpaceFighter1 {
 
+public class ArcadeSpaceFighter1 {
+        int xRes = 800;
+        int yRes = 500;
     /**
      * @param args the command line arguments
      */

@@ -7,7 +7,7 @@ package arcade.space.fighter.pkg1;
 
 /**
  *
- * @author Cicada
+ * @author Katydid
  */
 public class Player {
     int HP; // health
@@ -23,6 +23,7 @@ public class Player {
     float weaponsEnergyRegenRate;
     
     void create(){ // called on creation. Gives starting values based on type.
+        HP = 100;
         
     }
     
