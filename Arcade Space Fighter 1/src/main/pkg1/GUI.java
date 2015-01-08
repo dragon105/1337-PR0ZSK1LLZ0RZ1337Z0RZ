@@ -14,29 +14,51 @@ import java.awt.*;
  */
 
 public class GUI extends Main{
-    public JFrame startScreen;
-    public JPanel panel;
-    public JButton start;
+    public String gameState = "homeScreen"; // should always be one of "homeScreen", "paused", "playing", "over", "highScoreScreen"
+    
+    public JFrame window;
+    public JPanel startScreenPanel;
+    public JPanel gamePlayPanel;
+    public JPanel highScoresPanel;
+    public JPanel endGamePanel;
+    public JPanel pausedPanel;
+    public JButton startButton;
+    public JButton back;
     public JButton viewHighScores;
     
     public GUI(){
-
+        window = new JFrame("Arcade Space Fighter 1");
+        window.setVisible(true);
+        window.setSize(xRes, yRes);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     
     public void displayStartScreen(){
-        startScreen = new JFrame("Arcade Space Fighter 1");
-        startScreen.setVisible(true);
-        startScreen.setSize(xRes, yRes);
-        startScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
-        start = new JButton("Start Game");
+        startButton = new JButton("Start Game");
         viewHighScores = new JButton ("View High Scores");
         
-        panel = new JPanel();
-        panel.setBackground(Color.BLACK);
-        panel.add(start);
-        panel.add(viewHighScores);
+        startScreenPanel = new JPanel();
+        startScreenPanel.setBackground(Color.BLACK);
+        startScreenPanel.add(startButton);
+        startScreenPanel.add(viewHighScores);
         
-        startScreen.add(panel);
+        window.add(startScreenPanel);
+        
+    }
+    
+    public void displayHighScores(){
+        
+    }
+    
+    public void displayGamePlay(){
+        gamePlayPanel = new JPanel();
+        gamePlayPanel.setBackground(Color.BLACK);
+        
+        //window.removeAll();
+        window.add(gamePlayPanel);
+    }
+    
+    public void displayGameOverScreen(){
+        
     }
 }

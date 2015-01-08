@@ -10,15 +10,27 @@ package main.pkg1;
  * @author Katydid
  */
 
-
 public class Main {
-    public static int yRes = 500;
-    public static int xRes = 800;
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        new GUI().displayStartScreen();
-    }
+    public static int yRes = 600;
+    public static int xRes = 1000;
+    public static boolean running = true;
     
+    public static void main(String[] args) {
+        
+        GUI gui = new GUI();
+        gui.displayStartScreen();
+        
+        Player player = new Player();
+        
+        while (running){
+            // create a player image on the start screen. Not actually an instance of the class Player.java
+            
+            
+            // check if start button is pressed. If so, start game
+            if (gui.startButton.getModel().isPressed()){
+                gui.window.removeAll();
+                gui.displayGamePlay();
+            }
+        }
+    }
 }

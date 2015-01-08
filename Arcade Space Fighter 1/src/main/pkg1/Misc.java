@@ -9,7 +9,7 @@ package main.pkg1;
  *
  * @author Katydid
  */
-public class Misc {
+public class Misc extends Main{
     float xPos; // position on x axis
     float yPos; // position on y axis
     float[] hitbox = new float[2]; // size of hitbox relative to object
