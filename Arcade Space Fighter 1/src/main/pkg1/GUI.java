@@ -17,11 +17,7 @@ public class GUI extends Main{
     public String gameState = "homeScreen"; // should always be one of "homeScreen", "paused", "playing", "over", "highScoreScreen"
     
     public JFrame window;
-    public JPanel startScreenPanel;
-    public JPanel gamePlayPanel;
-    public JPanel highScoresPanel;
-    public JPanel endGamePanel;
-    public JPanel pausedPanel;
+    public JPanel gamePanel;
     public JButton startButton;
     public JButton back;
     public JButton viewHighScores;
@@ -31,19 +27,18 @@ public class GUI extends Main{
         window.setVisible(true);
         window.setSize(xRes, yRes);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        gamePanel = new JPanel();
+        window.add(gamePanel);
     }
     
     public void displayStartScreen(){
         startButton = new JButton("Start Game");
         viewHighScores = new JButton ("View High Scores");
         
-        startScreenPanel = new JPanel();
-        startScreenPanel.setBackground(Color.BLACK);
-        startScreenPanel.add(startButton);
-        startScreenPanel.add(viewHighScores);
-        
-        window.add(startScreenPanel);
-        
+        gamePanel.removeAll();
+        gamePanel.setBackground(Color.BLACK);
+        gamePanel.add(startButton);
+        gamePanel.add(viewHighScores); 
     }
     
     public void displayHighScores(){
@@ -51,11 +46,8 @@ public class GUI extends Main{
     }
     
     public void displayGamePlay(){
-        gamePlayPanel = new JPanel();
-        gamePlayPanel.setBackground(Color.BLACK);
-        
-        //window.removeAll();
-        window.add(gamePlayPanel);
+        gamePanel.removeAll();
+        gamePanel.setBackground(Color.BLACK);
     }
     
     public void displayGameOverScreen(){

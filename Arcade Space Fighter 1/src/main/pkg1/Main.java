@@ -23,12 +23,8 @@ public class Main {
         Player player = new Player();
         
         while (running){
-            // create a player image on the start screen. Not actually an instance of the class Player.java
-            
-            
             // check if start button is pressed. If so, start game
             if (gui.startButton.getModel().isPressed()){
-                gui.window.removeAll();
                 gui.displayGamePlay();
             }
         }

@@ -45,7 +45,7 @@ public class Player extends Main{
         playerImg = new JLabel();
         playerImgIcon = new ImageIcon("player.png");
         playerImg.setIcon(playerImgIcon);
-        
+                
     }
        
     void move(){// updates xPos and yPos
@@ -53,5 +53,9 @@ public class Player extends Main{
         xPos = (float) (xPos + (Math.cos(heading) * speed));
         // gets new y coordinate based on heading and speed
         yPos = (float) (yPos + (Math.sin(heading) * speed));
+    }
+    
+    void render(){// draw player on screen
+        
     }
 }
